@@ -131,6 +131,19 @@ header .mobile {
     color: white;
   }
 }
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  header .desktop .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .desktop .button {
+    display: none;
+  }
+}
 /* Banner section */
 .banner{
   background-image: url("../images/banner-landingpage.jpg");
@@ -268,13 +281,37 @@ header .mobile {
   }
 }
 
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  #sign-up-cta {
+    background-color: transparent;
+    border: none;
+    position: static;
+    /* border: solid 1px red; */
+    margin: auto;
+  }
+  .banner {
+    background-image: url(../images/banner-landingpage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+  }
+  #sign-up-cta .email {
+    display: none;
+  }
+  #sign-up-cta .header {
+    opacity: 1;
+  }
+}
 /* Features Section */
 
 #features-section {
   display: flex;
+  flex-direction: row;
+  max-width: 100%;
   justify-content: space-between;
   padding: 4rem 5%;
   background-color: #f3f3f3;
+  /* border: 1px solid red; */
 }
 
 .feature {
@@ -282,6 +319,7 @@ header .mobile {
   padding: 2rem;
   margin: 0px 1.25rem;
   background-color: white;
+  width: 40%;
 }
 
 .feature .image-container {
@@ -289,12 +327,17 @@ header .mobile {
   height: 65%;
   margin: 0 auto;
 }
-
+.image-container img {
+  max-width: 100%;
+  display: block;
+}
 .feature h2 {
   padding-bottom: .5rem;
   font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
+  font-family: "Roboto";
+  line-height: 1.2;
 }
 
 .feature h3 {
@@ -302,6 +345,7 @@ header .mobile {
   line-height: 1.2;
   font-weight: 300;
   color: #4a4a4a;
+  font-family: "Roboto";
 }
 
 @media only screen and (max-width: 890px) {
@@ -326,6 +370,12 @@ header .mobile {
   .feature {
     margin: 0;
     padding: 1.25rem 1rem 0 1rem;
+  }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  .feature .center {
+    text-align: start;
   }
 }
 
@@ -388,20 +438,26 @@ header .mobile {
     display: none;
   }
 }
-
+#filters-section .images-container {
+  display: flex;
+  max-width: 100%;
+  padding: 0 1%;
+}
 /* Quotes Section */
 
 #quotes-section {
   background-color: #f3f3f3;
+  /* border: 2px solid rebeccapurple; */
+  padding: 5rem;
 }
 
 #quotes-section content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
-  font-family: "Palatino", serif;
+  font-family: "Tinos", serif;
   font-size: 1.875rem;
   line-height: 1.1;
   font-style: italic;
@@ -417,7 +473,7 @@ header .mobile {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
@@ -428,6 +484,7 @@ header .mobile {
     margin: auto;
   }
 }
+/* Quotes section */
 
 /* Footer */
 
@@ -440,6 +497,8 @@ footer .content {
   color: white;
   display: flex;
   font-size: .75rem;
+  font-family: "Roboto";
+
 }
 
 footer .copyright {
